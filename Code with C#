@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AES_RSA_LAST
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        Class1 Class1 = new Class1();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEncrypt_Click(object sender, EventArgs e)
+        {
+            txtsifre.Text = Class1.AESsifrele(txtmetin.Text);
+            txtmetin.Clear();
+        }
+
+        private void txtsifre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDecrypt_Click(object sender, EventArgs e)
+        {
+            txtmetin.Text = Class1.AESsifre_Coz(txtsifre.Text);
+            txtsifre.Clear();
+        }
+
+        private void txtmetin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
